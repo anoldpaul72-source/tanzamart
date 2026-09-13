@@ -38,12 +38,18 @@ COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 # Fix CRLF line endings and set execution permissions
 RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh && chmod +x /usr/local/bin/entrypoint.sh
 
+# Ensure .env exists with APP_KEY during build
+RUN cp .env.example .env && php -r "file_exists('.env') || copy('.env.example', '.env');"
+
 # Install production PHP dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress
 
+# Generate application key in build
+RUN php artisan key:generate --force
+
 # Set directory permissions for web server
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+    && chmod -R 777 /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Port exposure (dynamically mapped by Render / Railway via $PORT)
 EXPOSE 80

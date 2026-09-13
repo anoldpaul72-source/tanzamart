@@ -6,14 +6,11 @@ PORT="${PORT:-80}"
 echo "Configuring Nginx to listen on port ${PORT}..."
 sed -i "s/listen 80;/listen ${PORT};/g" /etc/nginx/sites-available/default
 
-# Create SQLite database directory and file if SQLite is configured
-if [ "$DB_CONNECTION" = "sqlite" ] || [ -z "$DB_CONNECTION" ]; then
-    mkdir -p /var/www/html/database
-    if [ ! -f /var/www/html/database/database.sqlite ]; then
-        echo "Creating database.sqlite..."
-        touch /var/www/html/database/database.sqlite
-    fi
-    chown -R www-data:www-data /var/www/html/database
+# Ensure .env exists and has an APP_KEY
+if [ ! -f /var/www/html/.env ]; then
+    echo "Creating .env from .env.example..."
+    cp /var/www/html/.env.example /var/www/html/.env
+    php artisan key:generate --force || true
 fi
 
 # Ensure storage directories exist with right permissions
@@ -21,14 +18,18 @@ mkdir -p /var/www/html/storage/framework/sessions
 mkdir -p /var/www/html/storage/framework/views
 mkdir -p /var/www/html/storage/framework/cache
 mkdir -p /var/www/html/storage/logs
+chmod -R 777 /var/www/html/storage /var/www/html/bootstrap/cache
 chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
-chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Generate app key if not set
-if [ -z "$APP_KEY" ]; then
-    echo "Generating Application Key..."
-    php artisan key:generate --force || true
+# Create SQLite database directory and file with full read/write permissions
+mkdir -p /var/www/html/database
+if [ ! -f /var/www/html/database/database.sqlite ]; then
+    echo "Creating database.sqlite..."
+    touch /var/www/html/database/database.sqlite
 fi
+chmod 777 /var/www/html/database
+chmod 666 /var/www/html/database/database.sqlite
+chown -R www-data:www-data /var/www/html/database
 
 # Create public storage symlink
 php artisan storage:link --force || true
