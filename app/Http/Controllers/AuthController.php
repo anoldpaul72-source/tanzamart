@@ -85,4 +85,32 @@ class AuthController extends Controller
         }
         return redirect()->route('home');
     }
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => 'required',
+            'password' => 'required|min:6|confirmed',
+        ], [
+            'current_password.required' => app()->getLocale() == 'sw' ? 'Tafadhali weka nenosiri lako la sasa.' : 'Please enter your current password.',
+            'password.required' => app()->getLocale() == 'sw' ? 'Tafadhali weka nenosiri jipya.' : 'Please enter a new password.',
+            'password.min' => app()->getLocale() == 'sw' ? 'Nenosiri lazima liwe na herufi zisizopungua 6.' : 'Password must be at least 6 characters.',
+            'password.confirmed' => app()->getLocale() == 'sw' ? 'Nenosiri la kurudia halilingani.' : 'Password confirmation does not match.',
+        ]);
+
+        $user = Auth::user();
+
+        if (!Hash::check($request->current_password, $user->password)) {
+            return back()->withErrors([
+                'current_password' => app()->getLocale() == 'sw' ? 'Nenosiri lako la sasa si sahihi.' : 'The current password is incorrect.',
+            ])->with('password_modal_error', true);
+        }
+
+        $user->update([
+            'password' => Hash::make($request->password),
+        ]);
+
+        $msg = app()->getLocale() == 'sw' ? 'Nenosiri lako limebadilishwa kikamilifu!' : 'Your password has been successfully updated!';
+        return back()->with('success', $msg);
+    }
 }

@@ -457,6 +457,13 @@
                     <span>Export Backup Data</span>
                 </a>
             </li>
+
+            <li class="menu-item">
+                <a href="javascript:void(0)" onclick="openChangePasswordModal()" class="menu-link" style="color: #38bdf8; font-weight: 700;">
+                    <span class="icon">🔑</span>
+                    <span>{{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}</span>
+                </a>
+            </li>
         </ul>
 
         <div class="sidebar-footer">
@@ -487,6 +494,10 @@
             </div>
 
             <div class="topbar-right">
+                <button type="button" onclick="openChangePasswordModal()" class="topbar-link" style="background: rgba(0, 188, 212, 0.1); color: #00bcd4; border: 1px solid rgba(0, 188, 212, 0.3); font-weight: 700; cursor: pointer;" title="Badili Nenosiri">
+                    <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
+                </button>
+
                 <a href="{{ route('admin.backup.export') }}" class="topbar-link" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); font-weight: 700;" title="Download full system data backup">
                     <span>💾</span> Export Backup
                 </a>
@@ -518,6 +529,9 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- CHANGE PASSWORD MODAL -->
+    @include('partials.change_password_modal')
 
     <script>
         function toggleSidebar() {

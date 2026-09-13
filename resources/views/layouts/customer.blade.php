@@ -455,6 +455,13 @@
                     <span>{{ __('messages.nav_home') }}</span>
                 </a>
             </li>
+
+            <li class="menu-item">
+                <a href="javascript:void(0)" onclick="openChangePasswordModal()" class="menu-link" style="color: #38bdf8; font-weight: 700;">
+                    <span class="icon">🔑</span>
+                    <span>{{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}</span>
+                </a>
+            </li>
         </ul>
 
         <div class="sidebar-footer">
@@ -491,6 +498,10 @@
             </div>
 
             <div class="topbar-right">
+                <button type="button" onclick="openChangePasswordModal()" class="topbar-btn" style="background: rgba(0, 188, 212, 0.1); color: #0891b2; border: 1px solid rgba(0, 188, 212, 0.35); font-weight: 700; cursor: pointer;" title="Badili Nenosiri">
+                    <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
+                </button>
+
                 <a href="{{ route('cart.index') }}" class="topbar-btn">
                     <span>🛒</span> {{ __('messages.sidebar_cust_cart') }}
                 </a>
@@ -517,6 +528,9 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- CHANGE PASSWORD MODAL -->
+    @include('partials.change_password_modal')
 
     <script>
         function toggleSidebar() {

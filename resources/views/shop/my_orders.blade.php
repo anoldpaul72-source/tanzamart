@@ -280,7 +280,10 @@
                 : 'View order history, confirm package receipt or open a dispute with admin support.' }}
         </p>
     </div>
-    <div>
+    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+        <button type="button" onclick="openChangePasswordModal()" style="background: rgba(0, 188, 212, 0.12); color: #0891b2; border: 1px solid rgba(0, 188, 212, 0.35); padding: 8px 16px; border-radius: 8px; font-size: 0.8125rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+            🔑 {{ app()->getLocale() === 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
+        </button>
         <a href="{{ route('shop.products') }}" style="background: #06b6d4; color: white; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.8125rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
             🛍️ {{ __('messages.customer_menu_shop') }}
         </a>

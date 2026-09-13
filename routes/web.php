@@ -47,6 +47,7 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
 Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/profile/password', [AuthController::class, 'updatePassword'])->middleware('auth')->name('profile.password.update');
 
 // Dashibodi ya Muuzaji (Vendor Portal)
 Route::prefix('vendor')->middleware(['auth', 'role:vendor,admin'])->group(function () {

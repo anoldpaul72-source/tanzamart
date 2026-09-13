@@ -181,6 +181,9 @@
             <p>{{ __('messages.sidebar_role_admin') }} - TanzaMart E-Commerce Administration & Escrow System</p>
         </div>
         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <button type="button" onclick="openChangePasswordModal()" class="dash-badge" style="background: rgba(0, 188, 212, 0.2); border-color: rgba(0, 188, 212, 0.5); color: #00e5ff; cursor: pointer;" title="Badili Nenosiri la Admin">
+                <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
+            </button>
             <a href="{{ route('admin.backup.export') }}" class="dash-badge" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.5); color: #34d399; text-decoration: none;" title="Download full JSON data backup">
                 <span>💾</span> Pakua Backup ya Mfumo
             </a>
@@ -294,6 +297,10 @@
             <a href="{{ route('admin.backup.export') }}" class="action-tile" style="border-color: rgba(16, 185, 129, 0.45); background: rgba(16, 185, 129, 0.05);">
                 <span class="tile-icon">💾</span>
                 <span style="color: #10b981; font-weight: 700;">Export Backup Data</span>
+            </a>
+            <a href="javascript:void(0)" onclick="openChangePasswordModal()" class="action-tile" style="border-color: rgba(0, 188, 212, 0.45); background: rgba(0, 188, 212, 0.05);">
+                <span class="tile-icon">🔑</span>
+                <span style="color: #0891b2; font-weight: 700;">{{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}</span>
             </a>
         </div>
     </div>

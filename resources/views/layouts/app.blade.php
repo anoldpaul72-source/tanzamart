@@ -688,13 +688,18 @@
                         </div>
                         <div class="user-meta-info">
                             <div class="user-meta-name" title="{{ Auth::user()->name }}">{{ Auth::user()->name }}</div>
-                            @if(Auth::user()->isAdmin())
-                                <span class="role-pill admin">⚡ Admin</span>
-                            @elseif(Auth::user()->isVendor())
-                                <span class="role-pill vendor">🏪 Vendor</span>
-                            @else
-                                <span class="role-pill customer">🛍️ Customer</span>
-                            @endif
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-top: 4px; flex-wrap: wrap;">
+                                @if(Auth::user()->isAdmin())
+                                    <span class="role-pill admin">⚡ Admin</span>
+                                @elseif(Auth::user()->isVendor())
+                                    <span class="role-pill vendor">🏪 Vendor</span>
+                                @else
+                                    <span class="role-pill customer">🛍️ Customer</span>
+                                @endif
+                                <button type="button" onclick="openChangePasswordModal()" style="background: none; border: none; color: #00bcd4; font-size: 11px; font-weight: 700; cursor: pointer; padding: 2px 4px; display: inline-flex; align-items: center; gap: 3px;" title="Badili Nenosiri">
+                                    <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 @else
@@ -838,6 +843,9 @@
             </div>
 
             @auth
+                <button type="button" onclick="openChangePasswordModal()" class="sidebar-logout-btn" style="background: rgba(0, 188, 212, 0.12); border: 1px solid rgba(0, 188, 212, 0.3); color: #00bcd4; margin-bottom: 6px;" title="Badili Nenosiri la akaunti">
+                    <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
+                </button>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit" class="sidebar-logout-btn">
@@ -975,6 +983,11 @@
             initSidebarState();
         });
     </script>
+
+    @auth
+        <!-- CHANGE PASSWORD MODAL -->
+        @include('partials.change_password_modal')
+    @endauth
 
     @stack('scripts')
 </body>
