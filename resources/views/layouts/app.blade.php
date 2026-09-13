@@ -330,6 +330,108 @@
             color: #0b1329;
         }
 
+        /* Sidebar Category Dropdown Section */
+        .sidebar-category-toggle {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 9px 12px;
+            color: #e2e8f0;
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            margin-top: 14px;
+            margin-bottom: 8px;
+            outline: none;
+        }
+
+        .sidebar-category-toggle:hover {
+            background: rgba(0, 188, 212, 0.12);
+            border-color: rgba(0, 188, 212, 0.35);
+            color: #00bcd4;
+        }
+
+        .sidebar-category-toggle.open {
+            background: rgba(0, 188, 212, 0.15);
+            border-color: rgba(0, 188, 212, 0.4);
+            color: #ffffff;
+        }
+
+        .category-toggle-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .category-chevron {
+            font-size: 11px;
+            transition: transform 0.3s ease;
+            color: #94a3b8;
+            font-weight: 800;
+        }
+
+        .sidebar-category-toggle.open .category-chevron {
+            transform: rotate(180deg);
+            color: #00bcd4;
+        }
+
+        .sidebar-category-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .sidebar-category-dropdown.open {
+            max-height: 1200px;
+            opacity: 1;
+        }
+
+        /* Category Select Box inside sidebar */
+        .sidebar-category-select-wrapper {
+            margin: 4px 0 10px 0;
+            position: relative;
+        }
+
+        .sidebar-category-select {
+            width: 100%;
+            padding: 9px 32px 9px 12px;
+            background: #0f172a;
+            border: 1.5px solid rgba(0, 188, 212, 0.35);
+            border-radius: 8px;
+            color: #38bdf8;
+            font-size: 12.5px;
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.2s;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300bcd4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 14px;
+        }
+
+        .sidebar-category-select:hover, .sidebar-category-select:focus {
+            border-color: #00bcd4;
+            background-color: #1e293b;
+            box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
+        }
+
+        .sidebar-category-select option {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 8px;
+        }
+
         /* Quick Support Banner in Sidebar */
         .sidebar-support-card {
             background: linear-gradient(135deg, rgba(0, 188, 212, 0.12), rgba(15, 23, 42, 0.4));
@@ -807,24 +909,59 @@
                 </li>
             </ul>
 
-            <!-- Product Categories Section -->
-            <div class="sidebar-section-title">🏷️ {{ __('messages.categories') }}</div>
-            <ul class="sidebar-nav-list">
-                @foreach($sidebarCategories as $cat)
+            <!-- Product Categories Section with Drop Down -->
+            <button type="button" class="sidebar-category-toggle open" id="categoryDropdownBtn" onclick="toggleCategoriesDropdown()" title="{{ app()->getLocale() == 'sw' ? 'Bofya kufungua au kufunga kategoria' : 'Click to toggle categories' }}">
+                <div class="category-toggle-left">
+                    <span style="font-size: 14px;">🏷️</span>
+                    <span>{{ __('messages.categories') }}</span>
+                    <span class="count-badge primary">{{ $sidebarCategories->count() }}</span>
+                </div>
+                <span class="category-chevron" id="categoryChevron">▼</span>
+            </button>
+
+            <div class="sidebar-category-dropdown open" id="categoryDropdownContent">
+                <!-- Dropdown Select Picker -->
+                <div class="sidebar-category-select-wrapper">
+                    <select class="sidebar-category-select" onchange="if(this.value) window.location.href=this.value;" title="{{ app()->getLocale() == 'sw' ? 'Chagua Kategoria Moja kwa Moja' : 'Quick Category Selector' }}">
+                        <option value="{{ route('shop.products') }}">
+                            🏷️ {{ app()->getLocale() == 'sw' ? '-- Chagua Kategoria Zote (' . $sidebarCategories->count() . ') --' : '-- View All Categories (' . $sidebarCategories->count() . ') --' }}
+                        </option>
+                        @foreach($sidebarCategories as $cat)
+                            <option value="{{ route('shop.products', ['category' => $cat->slug]) }}" {{ request('category') == $cat->slug ? 'selected' : '' }}>
+                                {{ $cat->icon ?? '📦' }} {{ $cat->name }} ({{ $cat->products_count }})
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <!-- Category List Items -->
+                <ul class="sidebar-nav-list" style="margin-bottom: 8px;">
                     <li class="sidebar-nav-item">
-                        <a href="{{ route('shop.products', ['category' => $cat->slug]) }}" 
-                           class="sidebar-nav-link {{ request('category') == $cat->slug ? 'active' : '' }}">
+                        <a href="{{ route('shop.products') }}" 
+                           class="sidebar-nav-link {{ request()->routeIs('shop.products') && !request('category') ? 'active' : '' }}">
                             <span class="sidebar-nav-link-left">
-                                <span class="nav-icon">{{ $cat->icon ?? '📦' }}</span> 
-                                <span>{{ $cat->name }}</span>
+                                <span class="nav-icon">✨</span> 
+                                <span>{{ app()->getLocale() == 'sw' ? 'Bidhaa Zote (Kategoria Zote)' : 'All Products (All Categories)' }}</span>
                             </span>
-                            @if($cat->products_count > 0)
-                                <span class="count-badge">{{ $cat->products_count }}</span>
-                            @endif
+                            <span class="count-badge primary">{{ $sidebarCategories->sum('products_count') }}</span>
                         </a>
                     </li>
-                @endforeach
-            </ul>
+                    @foreach($sidebarCategories as $cat)
+                        <li class="sidebar-nav-item">
+                            <a href="{{ route('shop.products', ['category' => $cat->slug]) }}" 
+                               class="sidebar-nav-link {{ request('category') == $cat->slug ? 'active' : '' }}">
+                                <span class="sidebar-nav-link-left">
+                                    <span class="nav-icon">{{ $cat->icon ?? '📦' }}</span> 
+                                    <span>{{ $cat->name }}</span>
+                                </span>
+                                @if($cat->products_count > 0)
+                                    <span class="count-badge">{{ $cat->products_count }}</span>
+                                @endif
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
 
             <!-- Support & Assistance Card -->
             <div class="sidebar-support-card">
@@ -979,8 +1116,34 @@
             initSidebarState();
         });
 
+        function toggleCategoriesDropdown() {
+            const btn = document.getElementById('categoryDropdownBtn');
+            const content = document.getElementById('categoryDropdownContent');
+            if (btn && content) {
+                btn.classList.toggle('open');
+                content.classList.toggle('open');
+                const isOpen = content.classList.contains('open');
+                localStorage.setItem('tanzamart_cat_dropdown', isOpen ? 'open' : 'closed');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             initSidebarState();
+
+            // Category Dropdown State Init
+            const catPref = localStorage.getItem('tanzamart_cat_dropdown');
+            const btn = document.getElementById('categoryDropdownBtn');
+            const content = document.getElementById('categoryDropdownContent');
+            const isFiltering = window.location.search.includes('category=');
+            if (btn && content) {
+                if (isFiltering || catPref === 'open' || catPref === null) {
+                    btn.classList.add('open');
+                    content.classList.add('open');
+                } else {
+                    btn.classList.remove('open');
+                    content.classList.remove('open');
+                }
+            }
         });
     </script>
 
