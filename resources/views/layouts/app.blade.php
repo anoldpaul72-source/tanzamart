@@ -861,34 +861,12 @@
             </div>
 
             <nav>
-                <a href="{{ route('home') }}" class="nav-link-optional">{{ __('messages.nav_home') }}</a>
-                <a href="{{ route('about') }}" class="nav-link-optional" style="color: #38bdf8; font-weight: 700;">ℹ️ {{ app()->getLocale() == 'sw' ? 'Kuhusu Sisi' : 'About Us' }}</a>
-                <a href="{{ route('shop.products') }}" class="nav-link-optional">{{ __('messages.nav_products') }}</a>
-                <a href="{{ route('order.track') }}" class="nav-link-optional">{{ __('messages.nav_track') }}</a>
-                
-                <a href="{{ route('cart.index') }}" class="header-cart-btn">
+                <a href="{{ route('cart.index') }}" class="header-cart-btn" title="{{ __('messages.nav_cart') }}">
                     <span>🛒</span>
-                    <span class="nav-link-optional">{{ __('messages.nav_cart') }}</span>
                     @if($cartCount > 0)
-                        <span style="background: #0b1329; color: #00bcd4; padding: 1px 6px; border-radius: 10px; font-size: 11px;">{{ $cartCount }}</span>
+                        <span style="background: #0b1329; color: #00bcd4; padding: 1px 6px; border-radius: 10px; font-size: 11px; font-weight: bold;">{{ $cartCount }}</span>
                     @endif
                 </a>
-
-                @auth
-                    @if(Auth::user()->isAdmin())
-                        <a href="{{ route('admin.dashboard') }}" style="color: #ffc107; font-weight: bold;">⚡ {{ __('messages.nav_admin') }}</a>
-                    @elseif(Auth::user()->isVendor())
-                        <a href="{{ route('vendor.dashboard') }}" style="color: #4ade80; font-weight: bold;">🏪 {{ __('messages.nav_vendor') }}</a>
-                    @endif
-                    <a href="{{ route('order.my_orders') }}" style="color: #00bcd4; font-weight: bold;" class="nav-link-optional">{{ __('messages.nav_my_orders') }}</a>
-                    <form action="{{ route('logout') }}" method="POST" style="display:inline; margin: 0 0 0 10px;">
-                        @csrf
-                        <button type="submit" style="background:none; border:none; color:#cbd5e1; font-size:14px; font-weight:600; cursor:pointer; font-family:inherit; transition:0.3s;" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#cbd5e1'">{{ __('messages.nav_logout') }}</button>
-                    </form>
-                @else
-                    <a href="{{ route('login') }}">{{ __('messages.nav_login') }}</a>
-                    <a href="{{ route('register') }}">{{ __('messages.nav_register') }}</a>
-                @endauth
 
                 <!-- Dropdown ya Lugha -->
                 <select class="lang-select" onchange="location = this.value;">
