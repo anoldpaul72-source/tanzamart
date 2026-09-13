@@ -33,9 +33,9 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        background: rgba(0, 188, 212, 0.15);
-        border: 1px solid rgba(0, 188, 212, 0.3);
-        color: #00bcd4;
+        background: rgba(37, 99, 235, 0.15);
+        border: 1px solid rgba(37, 99, 235, 0.3);
+        color: #2563eb;
         padding: 6px 14px;
         border-radius: 20px;
         font-size: 13px;
@@ -70,7 +70,7 @@
         bottom: 0;
         width: 4px;
     }
-    .kpi-card.cyan::before { background: #00bcd4; }
+    .kpi-card.cyan::before { background: #2563eb; }
     .kpi-card.amber::before { background: #f59e0b; }
     .kpi-card.rose::before { background: #f43f5e; }
     .kpi-card.emerald::before { background: #10b981; }
@@ -98,7 +98,7 @@
         justify-content: center;
         font-size: 20px;
     }
-    .kpi-card.cyan .kpi-icon { background: #e0f7fa; color: #00838f; }
+    .kpi-card.cyan .kpi-icon { background: #eff6ff; color: #1e40af; }
     .kpi-card.amber .kpi-icon { background: #fef3c7; color: #b45309; }
     .kpi-card.rose .kpi-icon { background: #ffe4e6; color: #be123c; }
     .kpi-card.emerald .kpi-icon { background: #d1fae5; color: #047857; }
@@ -181,7 +181,7 @@
             <p>{{ __('messages.sidebar_role_admin') }} - TanzaMart E-Commerce Administration & Escrow System</p>
         </div>
         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-            <button type="button" onclick="openChangePasswordModal()" class="dash-badge" style="background: rgba(0, 188, 212, 0.2); border-color: rgba(0, 188, 212, 0.5); color: #00e5ff; cursor: pointer;" title="Badili Nenosiri la Admin">
+            <button type="button" onclick="openChangePasswordModal()" class="dash-badge" style="background: rgba(37, 99, 235, 0.2); border-color: rgba(37, 99, 235, 0.5); color: #60a5fa; cursor: pointer;" title="Badili Nenosiri la Admin">
                 <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
             </button>
             <a href="{{ route('admin.backup.export') }}" class="dash-badge" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.5); color: #34d399; text-decoration: none;" title="Download full JSON data backup">
@@ -298,9 +298,9 @@
                 <span class="tile-icon">💾</span>
                 <span style="color: #10b981; font-weight: 700;">Export Backup Data</span>
             </a>
-            <a href="javascript:void(0)" onclick="openChangePasswordModal()" class="action-tile" style="border-color: rgba(0, 188, 212, 0.45); background: rgba(0, 188, 212, 0.05);">
+            <a href="javascript:void(0)" onclick="openChangePasswordModal()" class="action-tile" style="border-color: rgba(37, 99, 235, 0.45); background: rgba(37, 99, 235, 0.05);">
                 <span class="tile-icon">🔑</span>
-                <span style="color: #0891b2; font-weight: 700;">{{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}</span>
+                <span style="color: #1d4ed8; font-weight: 700;">{{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}</span>
             </a>
         </div>
     </div>

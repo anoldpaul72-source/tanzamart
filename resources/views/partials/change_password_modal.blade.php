@@ -39,7 +39,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 2px solid #00bcd4;
+        border-bottom: 2px solid #2563eb;
     }
 
     .pwd-modal-title {
@@ -106,8 +106,8 @@
     }
 
     .pwd-input:focus {
-        border-color: #00bcd4;
-        box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
         background: #ffffff;
     }
 
@@ -123,7 +123,7 @@
     }
 
     .pwd-toggle-eye:hover {
-        color: #00bcd4;
+        color: #2563eb;
     }
 
     .pwd-error-msg {
@@ -163,19 +163,19 @@
     .pwd-btn-submit {
         padding: 10px 22px;
         border: none;
-        background: linear-gradient(135deg, #00bcd4, #0097a7);
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
         color: #ffffff;
         font-size: 14px;
         font-weight: 700;
         border-radius: 8px;
         cursor: pointer;
         transition: 0.2s;
-        box-shadow: 0 4px 12px rgba(0, 188, 212, 0.25);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
     }
 
     .pwd-btn-submit:hover {
-        background: #00838f;
-        box-shadow: 0 6px 16px rgba(0, 188, 212, 0.35);
+        background: #1e40af;
+        box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
     }
 
     @keyframes pwdFadeIn {

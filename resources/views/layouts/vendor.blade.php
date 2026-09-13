@@ -7,11 +7,11 @@
     <title>@yield('title', __('messages.sidebar_vendor_title')) - TanzaMart</title>
     <style>
         :root {
-            --primary: #00bcd4;
-            --primary-dark: #0097a7;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
             --sidebar-bg: #1a237e;
             --sidebar-hover: #283593;
-            --sidebar-active: #00bcd4;
+            --sidebar-active: #2563eb;
             --sidebar-text: #c5cae9;
             --body-bg: #f4f6f9;
             --card-bg: #ffffff;
@@ -67,7 +67,7 @@
         .sidebar-brand .logo-icon {
             width: 38px;
             height: 38px;
-            background: linear-gradient(135deg, #00bcd4, #0284c7);
+            background: linear-gradient(135deg, #2563eb, #0284c7);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -85,7 +85,7 @@
         }
 
         .sidebar-brand .brand-badge {
-            background: #00bcd4;
+            background: #2563eb;
             color: #000;
             font-size: 10px;
             font-weight: 800;
@@ -168,10 +168,10 @@
         }
 
         .menu-link.active {
-            background: linear-gradient(135deg, #00bcd4, #0284c7);
+            background: linear-gradient(135deg, #2563eb, #0284c7);
             color: #ffffff;
             font-weight: 700;
-            box-shadow: 0 4px 12px rgba(0, 188, 212, 0.35);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
         }
 
         .sidebar-footer {
@@ -213,7 +213,7 @@
         }
 
         .btn-lang.active {
-            background: #00bcd4;
+            background: #2563eb;
             color: #000;
         }
 
@@ -508,7 +508,7 @@
             </div>
 
             <div class="topbar-right">
-                <button type="button" onclick="openChangePasswordModal()" class="topbar-btn" style="background: rgba(0, 188, 212, 0.12); color: #0284c7; border: 1px solid rgba(0, 188, 212, 0.35); font-weight: 700; cursor: pointer;" title="Badili Nenosiri">
+                <button type="button" onclick="openChangePasswordModal()" class="topbar-btn" style="background: rgba(37, 99, 235, 0.12); color: #0284c7; border: 1px solid rgba(37, 99, 235, 0.35); font-weight: 700; cursor: pointer;" title="Badili Nenosiri">
                     <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
                 </button>
 

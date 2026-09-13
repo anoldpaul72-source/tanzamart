@@ -6,7 +6,7 @@
     right: 25px;
     width: 55px;
     height: 55px;
-    background: #00bcd4;
+    background: #2563eb;
     color: #fff;
     border-radius: 50%;
     border: none;
@@ -41,7 +41,7 @@
 }
 
 .tm-bot-header {
-    background: #00bcd4;
+    background: #2563eb;
     color: white;
     padding: 12px 15px;
     font-weight: bold;
@@ -77,7 +77,7 @@
 }
 
 .tm-outgoing {
-    background: #00bcd4;
+    background: #2563eb;
     color: #fff;
     margin-left: auto;
     border-bottom-right-radius: 2px;
@@ -101,7 +101,7 @@
 
 .tm-bot-input button {
     margin-left: 5px;
-    background: #00bcd4;
+    background: #2563eb;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -117,7 +117,7 @@
 }
 
 .tm-lang-btn {
-    background: #00bcd4;
+    background: #2563eb;
     color: #fff;
     border: none;
     padding: 4px 8px;

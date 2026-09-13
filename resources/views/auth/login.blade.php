@@ -39,7 +39,7 @@
 
         .back-link {
             text-decoration: none;
-            color: #00bcd4;
+            color: #2563eb;
             font-size: 14px;
             font-weight: bold;
             display: inline-block;
@@ -47,7 +47,7 @@
         }
 
         .back-link:hover {
-            color: #0097a7;
+            color: #1d4ed8;
         }
 
         h2 {
@@ -98,8 +98,8 @@
         }
 
         .input-group input:focus {
-            border-color: #00bcd4;
-            box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
         }
 
         .toggle-password {
@@ -107,7 +107,7 @@
             right: 15px;
             background: none;
             border: none;
-            color: #00bcd4;
+            color: #2563eb;
             font-size: 18px;
             cursor: pointer;
             padding: 0;
@@ -123,21 +123,21 @@
         }
 
         .forgot-link-container a {
-            color: #00bcd4;
+            color: #2563eb;
             font-size: 13px;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .forgot-link-container a:hover {
-            color: #0097a7;
+            color: #1d4ed8;
             text-decoration: underline;
         }
 
         button[type="submit"] {
             width: 100%;
             padding: 13px;
-            background: #00bcd4;
+            background: #2563eb;
             color: white;
             border: none;
             border-radius: 6px;
@@ -148,7 +148,7 @@
         }
 
         button[type="submit"]:hover {
-            background: #0097a7;
+            background: #1d4ed8;
         }
 
         .alert {
@@ -173,7 +173,7 @@
         }
 
         .register-link a {
-            color: #00bcd4;
+            color: #2563eb;
             text-decoration: none;
             font-weight: bold;
         }

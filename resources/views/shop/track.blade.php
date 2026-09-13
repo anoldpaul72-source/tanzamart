@@ -53,13 +53,13 @@
         box-sizing: border-box;
     }
     .track-input:focus {
-        border-color: #06b6d4;
-        box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
     }
     .btn-track {
         width: 100%;
         padding: 13px;
-        background: #06b6d4;
+        background: #2563eb;
         color: white;
         border: none;
         border-radius: 10px;
@@ -69,7 +69,7 @@
         transition: 0.2s;
     }
     .btn-track:hover {
-        background: #0891b2;
+        background: #1d4ed8;
     }
     .result-box {
         margin-top: 28px;

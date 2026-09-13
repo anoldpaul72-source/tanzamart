@@ -39,20 +39,20 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: #00bcd4;
+        background: #2563eb;
         color: #ffffff !important;
         padding: 10px 20px;
         border-radius: 8px;
         font-size: 14px;
         font-weight: 700;
         text-decoration: none;
-        box-shadow: 0 3px 10px rgba(0, 188, 212, 0.25);
+        box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
         transition: all 0.2s ease;
     }
     .btn-back:hover {
-        background: #0097a7;
+        background: #1d4ed8;
         transform: translateY(-1px);
-        box-shadow: 0 5px 15px rgba(0, 188, 212, 0.35);
+        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.35);
     }
 
     /* KPI Summary Cards */
@@ -84,7 +84,7 @@
     }
     .kpi-card.warning::before { background: #f59e0b; }
     .kpi-card.success::before { background: #10b981; }
-    .kpi-card.info::before { background: #00bcd4; }
+    .kpi-card.info::before { background: #2563eb; }
     
     .kpi-info h3 {
         font-size: 13px;
@@ -117,7 +117,7 @@
     }
     .kpi-card.warning .kpi-icon { background: #fef3c7; color: #b45309; }
     .kpi-card.success .kpi-icon { background: #d1fae5; color: #047857; }
-    .kpi-card.info .kpi-icon { background: #e0f7fa; color: #00838f; }
+    .kpi-card.info .kpi-icon { background: #eff6ff; color: #1e40af; }
 
     /* Filter & Search Bar */
     .filter-bar {
@@ -504,8 +504,8 @@
         font-family: inherit;
     }
     .form-group textarea:focus {
-        border-color: #00bcd4;
-        box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
     }
     .modal-footer {
         padding: 16px 24px;

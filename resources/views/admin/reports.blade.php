@@ -34,9 +34,9 @@
         color: #0f172a;
     }
     .filter-btn.active {
-        background: #06b6d4;
+        background: #2563eb;
         color: white;
-        border-color: #06b6d4;
+        border-color: #2563eb;
     }
     .chart-box {
         position: relative;
@@ -139,8 +139,8 @@
             datasets: [{
                 label: '{{ $text['col_sales'] }} (TZS)',
                 data: @json($sales_data),
-                backgroundColor: 'rgba(6, 182, 212, 0.65)',
-                borderColor: 'rgba(6, 182, 212, 1)',
+                backgroundColor: 'rgba(37, 99, 235, 0.65)',
+                borderColor: 'rgba(37, 99, 235, 1)',
                 borderWidth: 2,
                 borderRadius: 6,
                 barThickness: @json(count($periods) === 1 ? 220 : null)

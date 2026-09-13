@@ -12,7 +12,7 @@
         text-align: center;
         position: relative;
         overflow: hidden;
-        border-bottom: 3px solid #00bcd4;
+        border-bottom: 3px solid #2563eb;
     }
 
     .about-hero::before {
@@ -22,7 +22,7 @@
         right: -50px;
         width: 300px;
         height: 300px;
-        background: radial-gradient(circle, rgba(0, 188, 212, 0.25) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, transparent 70%);
         border-radius: 50%;
     }
 
@@ -34,7 +34,7 @@
     }
 
     .about-hero h1 span {
-        color: #00bcd4;
+        color: #2563eb;
     }
 
     .about-hero p {
@@ -68,7 +68,7 @@
         border-radius: 12px;
         text-align: center;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        border-top: 4px solid #00bcd4;
+        border-top: 4px solid #2563eb;
         transition: transform 0.3s ease;
     }
 
@@ -132,8 +132,8 @@
     }
 
     .pillar-card:hover {
-        border-color: #00bcd4;
-        box-shadow: 0 12px 30px rgba(0, 188, 212, 0.12);
+        border-color: #2563eb;
+        box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
         transform: translateY(-4px);
     }
 
@@ -141,8 +141,8 @@
         width: 60px;
         height: 60px;
         border-radius: 12px;
-        background: rgba(0, 188, 212, 0.12);
-        color: #00bcd4;
+        background: rgba(37, 99, 235, 0.12);
+        color: #2563eb;
         font-size: 28px;
         display: flex;
         align-items: center;
@@ -179,7 +179,7 @@
     }
 
     .pillar-features li span {
-        color: #00bcd4;
+        color: #2563eb;
         font-weight: bold;
     }
 
@@ -195,7 +195,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 30px;
-        border: 1px solid rgba(0, 188, 212, 0.3);
+        border: 1px solid rgba(37, 99, 235, 0.3);
     }
 
     .escrow-text {
@@ -214,7 +214,7 @@
     }
 
     .escrow-text h3 span {
-        color: #00bcd4;
+        color: #2563eb;
     }
 
     .escrow-text p {
@@ -224,8 +224,8 @@
     }
 
     .escrow-badge-box {
-        background: rgba(0, 188, 212, 0.15);
-        border: 2px dashed #00bcd4;
+        background: rgba(37, 99, 235, 0.15);
+        border: 2px dashed #2563eb;
         border-radius: 12px;
         padding: 20px 25px;
         text-align: center;
@@ -239,7 +239,7 @@
     .escrow-badge-box .title {
         font-size: 16px;
         font-weight: 800;
-        color: #00bcd4;
+        color: #2563eb;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
@@ -263,7 +263,7 @@
     }
 
     .payment-card:hover {
-        border-color: #00bcd4;
+        border-color: #2563eb;
         transform: translateY(-4px);
     }
 
@@ -286,12 +286,12 @@
 
     /* CTA STRIP */
     .cta-banner {
-        background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
         color: white;
         border-radius: 16px;
         padding: 45px 30px;
         text-align: center;
-        box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
     }
 
     .cta-banner h2 {
@@ -316,7 +316,7 @@
 
     .cta-btn-white {
         background: #ffffff;
-        color: #0097a7;
+        color: #1d4ed8;
         padding: 14px 28px;
         border-radius: 8px;
         font-size: 16px;

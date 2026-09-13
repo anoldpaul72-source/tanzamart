@@ -9,10 +9,10 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: #f4f7f6; padding: 30px 20px; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; }
         .checkout-container { max-width: 650px; width: 100%; margin: 20px auto; background: white; padding: 35px 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
-        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #00bcd4; font-size: 14px; font-weight: bold; }
-        .back-link:hover { color: #0097a7; }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #2563eb; font-size: 14px; font-weight: bold; }
+        .back-link:hover { color: #1d4ed8; }
         h2 { color: #333; margin-bottom: 20px; font-size: 22px; font-weight: bold; }
-        .amount-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 15px 18px; margin-bottom: 22px; border-radius: 4px; }
+        .amount-box { background: #eff6ff; border-left: 5px solid #2563eb; padding: 15px 18px; margin-bottom: 22px; border-radius: 4px; }
         .amount-box h3 { color: #006064; margin: 0; font-size: 18px; font-weight: bold; }
         .instructions { background: #fffde7; border: 1px solid #fff59d; padding: 16px 20px; border-radius: 6px; margin-bottom: 25px; }
         .instructions h4 { margin-top: 0; margin-bottom: 8px; color: #f57f17; font-size: 15px; font-weight: bold; }
@@ -20,7 +20,7 @@
         .form-group { margin-bottom: 16px; }
         .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #444; font-size: 13.5px; }
         .form-group input, .form-group select { width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; outline: none; }
-        .form-group input:focus, .form-group select:focus { border-color: #00bcd4; }
+        .form-group input:focus, .form-group select:focus { border-color: #2563eb; }
         
         .btn-complete { background: #ff9800; color: white; border: none; width: 100%; padding: 12px; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 15px; }
         .btn-complete:hover { background: #f57c00; }
@@ -29,8 +29,8 @@
         .btn-whatsapp { background: #25d366; color: white; border: none; width: 100%; padding: 13px; border-radius: 5px; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; margin-top: 12px; text-decoration: none; text-align: center; }
         .btn-whatsapp:hover { background: #1ebe5d; }
 
-        .btn-sms { background: #00bcd4; color: white; border: none; width: 100%; padding: 13px; border-radius: 5px; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; margin-top: 12px; text-decoration: none; text-align: center; }
-        .btn-sms:hover { background: #0097a7; }
+        .btn-sms { background: #2563eb; color: white; border: none; width: 100%; padding: 13px; border-radius: 5px; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; margin-top: 12px; text-decoration: none; text-align: center; }
+        .btn-sms:hover { background: #1d4ed8; }
 
         .alert-success { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; padding: 15px; border-radius: 5px; margin-bottom: 20px; font-size: 14px; text-align: center; font-weight: 500; line-height: 1.5; }
         .alert-error { background: #ffebee; color: #c62828; border: 1px solid #ffcdd2; padding: 12px; border-radius: 5px; margin-bottom: 15px; font-size: 14px; display: none; }

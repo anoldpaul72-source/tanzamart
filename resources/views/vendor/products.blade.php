@@ -184,7 +184,7 @@
     </div>
     @if(!$isRestricted)
         <div>
-            <button type="button" onclick="openAddModal()" style="background: #06b6d4; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; font-size: 0.875rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(6, 182, 212, 0.25);">
+            <button type="button" onclick="openAddModal()" style="background: #2563eb; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; font-size: 0.875rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);">
                 ➕ {{ __('messages.vendor_prod_add_heading') }}
             </button>
         </div>
@@ -375,7 +375,7 @@
                 <button type="button" class="btn-table-action" style="background: #e2e8f0; color: #475569;" onclick="closeAddModal()">
                     {{ __('messages.vendor_prod_btn_cancel') }}
                 </button>
-                <button type="submit" class="btn-table-action" style="background: #06b6d4; color: white; font-weight: 700;">
+                <button type="submit" class="btn-table-action" style="background: #2563eb; color: white; font-weight: 700;">
                     💾 {{ __('messages.vendor_prod_btn_save') }}
                 </button>
             </div>
@@ -493,7 +493,7 @@
                     imgWrap.style.height = '52px';
                     imgWrap.style.borderRadius = '6px';
                     imgWrap.style.overflow = 'hidden';
-                    imgWrap.style.border = '2px solid #06b6d4';
+                    imgWrap.style.border = '2px solid #2563eb';
 
                     const img = document.createElement('img');
                     img.src = e.target.result;

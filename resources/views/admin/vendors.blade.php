@@ -136,7 +136,7 @@
         transition: all 0.2s;
         box-sizing: border-box;
     }
-    .form-control:focus { border-color: #06b6d4; box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15); }
+    .form-control:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
     .modal-footer {
         padding: 14px 22px;
         background: #f8fafc;

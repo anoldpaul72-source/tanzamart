@@ -61,7 +61,7 @@
     }
     .status-select:focus { border-color: #6366f1; }
     .btn-save-status {
-        background: #06b6d4;
+        background: #2563eb;
         color: white;
         border: none;
         padding: 6px 12px;
@@ -71,7 +71,7 @@
         font-size: 0.75rem;
         transition: 0.2s;
     }
-    .btn-save-status:hover { background: #0891b2; }
+    .btn-save-status:hover { background: #1d4ed8; }
 </style>
 @endsection
 

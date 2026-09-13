@@ -27,7 +27,7 @@
         }
 
         .btn-print {
-            background: #00bcd4;
+            background: #2563eb;
             color: white;
             border: none;
             padding: 10px 22px;
@@ -39,7 +39,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 2px 6px rgba(0, 188, 212, 0.3);
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
             transition: background 0.2s ease;
         }
 

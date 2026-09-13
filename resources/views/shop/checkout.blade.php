@@ -9,18 +9,18 @@
         body { font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; }
         .checkout-container { max-width: 650px; margin: 20px auto; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         h2 { color: #333; margin-top: 0; }
-        .summary { background: #eef9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; border-left: 5px solid #00bcd4; }
+        .summary { background: #eff6ff; padding: 15px; border-radius: 5px; margin-bottom: 20px; border-left: 5px solid #2563eb; }
         .summary h3 { margin: 0 0 5px 0; color: #008ba3; font-size: 18px; }
         .payment-methods-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 15px; margin-bottom: 25px; }
         .payment-methods-box h4 { margin-top: 0; color: #222; font-size: 16px; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
         .payment-option { background: #fff; border: 1px solid #eee; padding: 12px; border-radius: 5px; margin-bottom: 12px; }
-        .payment-option strong { color: #00bcd4; font-size: 15px; display: block; margin-bottom: 5px; }
+        .payment-option strong { color: #2563eb; font-size: 15px; display: block; margin-bottom: 5px; }
         .payment-option p { margin: 3px 0; font-size: 14px; color: #444; }
         .hint-text { font-size: 13px; color: #666; margin-top: 6px; background: #fff8e1; padding: 8px; border-radius: 4px; border-left: 3px solid #ffb300; }
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; font-size: 14px; }
         .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; font-family: inherit; }
-        .btn-submit { background-color: #00bcd4; color: white; border: none; padding: 14px 20px; border-radius: 4px; font-size: 16px; cursor: pointer; width: 100%; font-weight: bold; transition: 0.3s; }
+        .btn-submit { background-color: #2563eb; color: white; border: none; padding: 14px 20px; border-radius: 4px; font-size: 16px; cursor: pointer; width: 100%; font-weight: bold; transition: 0.3s; }
         .btn-submit:hover { background-color: #008ba3; }
         .alert { padding: 15px; margin-bottom: 15px; border-radius: 6px; }
         .alert-danger { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }

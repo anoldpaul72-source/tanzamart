@@ -130,7 +130,7 @@
     }
 
     .product-info p {
-        color: #00bcd4;
+        color: #2563eb;
         font-weight: bold;
         margin-bottom: 15px;
         font-size: 16px;
@@ -138,6 +138,25 @@
 
     .product-info .btn {
         width: 100%;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.25s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: #1d4ed8;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+        transform: translateY(-2px);
     }
 
     /* CONTACT US SECTION */
@@ -162,7 +181,7 @@
         padding: 25px;
         border-radius: 8px;
         text-align: center;
-        border-top: 4px solid #00bcd4;
+        border-top: 4px solid #2563eb;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
     }
 
@@ -180,14 +199,14 @@
     }
 
     .contact-card a {
-        color: #00bcd4;
+        color: #2563eb;
         text-decoration: none;
         font-weight: bold;
         transition: 0.3s;
     }
 
     .contact-card a:hover {
-        color: #0097a7;
+        color: #1d4ed8;
         text-decoration: underline;
     }
 

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $product->name }} - TanzaMart</title>
-    <meta name="theme-color" content="#00bcd4">
+    <meta name="theme-color" content="#2563eb">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: #f5f5f5; margin: 0; padding: 25px 20px; min-height: 100vh; }
         .back-btn-container { max-width: 1000px; margin: 0 auto 15px auto; }
-        .back-btn { display: inline-block; color: #00bcd4; text-decoration: none; font-weight: bold; font-size: 15px; }
+        .back-btn { display: inline-block; color: #2563eb; text-decoration: none; font-weight: bold; font-size: 15px; }
         .back-btn:hover { text-decoration: underline; }
         
         .container { 
@@ -45,7 +45,7 @@
             text-transform: uppercase; 
             letter-spacing: 0.5px; 
         }
-        .color-instruction span { color: #00bcd4; }
+        .color-instruction span { color: #2563eb; }
 
         .thumbnails { 
             display: flex; 
@@ -66,7 +66,7 @@
             transition: 0.2s; 
         }
         .thumb:hover, .thumb.active { 
-            border-color: #00bcd4; 
+            border-color: #2563eb; 
             transform: scale(1.05); 
         }
         
@@ -99,7 +99,7 @@
 
         .price { 
             font-size: 26px; 
-            color: #00bcd4; 
+            color: #2563eb; 
             font-weight: bold; 
             margin: 15px 0; 
         }
@@ -128,8 +128,8 @@
             border: 1px solid #ffcdd2; 
         }
         .views-badge { 
-            background: #e0f7fa; 
-            color: #00838f; 
+            background: #eff6ff; 
+            color: #1e40af; 
             border: 1px solid #b2ebf2; 
         }
 
@@ -161,7 +161,7 @@
             width: 100%; 
             text-align: center; 
         }
-        .cart-btn:hover { background: #00bcd4; }
+        .cart-btn:hover { background: #2563eb; }
         .cart-btn:disabled { background: #ccc; cursor: not-allowed; }
     </style>
 </head>

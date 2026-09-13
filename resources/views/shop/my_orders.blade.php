@@ -15,7 +15,7 @@
         padding: 22px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         border: 1px solid #e2e8f0;
-        border-top: 4px solid #06b6d4;
+        border-top: 4px solid #2563eb;
     }
     .order-head {
         display: flex;
@@ -30,7 +30,7 @@
     .order-number {
         font-weight: 700;
         font-size: 1.125rem;
-        color: #06b6d4;
+        color: #2563eb;
     }
     .order-date {
         font-size: 0.8125rem;
@@ -139,7 +139,7 @@
         gap: 5px;
         transition: 0.2s;
     }
-    .btn-receipt:hover { background: #06b6d4; }
+    .btn-receipt:hover { background: #2563eb; }
     .btn-confirm {
         background: #10b981;
         color: white;
@@ -281,10 +281,10 @@
         </p>
     </div>
     <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-        <button type="button" onclick="openChangePasswordModal()" style="background: rgba(0, 188, 212, 0.12); color: #0891b2; border: 1px solid rgba(0, 188, 212, 0.35); padding: 8px 16px; border-radius: 8px; font-size: 0.8125rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+        <button type="button" onclick="openChangePasswordModal()" style="background: rgba(37, 99, 235, 0.12); color: #1d4ed8; border: 1px solid rgba(37, 99, 235, 0.35); padding: 8px 16px; border-radius: 8px; font-size: 0.8125rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
             🔑 {{ app()->getLocale() === 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
         </button>
-        <a href="{{ route('shop.products') }}" style="background: #06b6d4; color: white; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.8125rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+        <a href="{{ route('shop.products') }}" style="background: #2563eb; color: white; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.8125rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
             🛍️ {{ __('messages.customer_menu_shop') }}
         </a>
     </div>
@@ -382,7 +382,7 @@
                     <p>📍 <strong>{{ app()->getLocale() === 'sw' ? 'Mahali:' : 'Delivery Address:' }}</strong> {{ $order->city ? $order->city . ', ' : '' }}{{ $order->address }}</p>
                 @endif
                 @if(!empty($order->transaction_id))
-                    <p>💳 <strong>{{ app()->getLocale() === 'sw' ? 'Kumbukumbu ya Muamala:' : 'Transaction Ref:' }}</strong> <span style="color:#06b6d4; font-weight: bold;">{{ $order->transaction_id }}</span></p>
+                    <p>💳 <strong>{{ app()->getLocale() === 'sw' ? 'Kumbukumbu ya Muamala:' : 'Transaction Ref:' }}</strong> <span style="color:#2563eb; font-weight: bold;">{{ $order->transaction_id }}</span></p>
                 @endif
                 <p>🔒 <strong>{{ app()->getLocale() === 'sw' ? 'Hali ya Malipo ya Escrow:' : 'Escrow Payment Status:' }}</strong> 
                     <span style="color: {{ in_array($payment_status, ['released', 'completed']) ? '#16a34a' : (($payment_status === 'dispute' || $payment_status === 'refunded') ? '#dc2626' : '#d97706') }}; font-weight: bold;">
@@ -469,7 +469,7 @@
             <p style="margin: 0 0 16px 0; color: #64748b; font-size: 0.875rem;">
                 {{ app()->getLocale() === 'sw' ? 'Ukishafanya oda, historia yako ya manunuzi itaonekana hapa.' : 'Once you make a purchase, your orders and escrow tracking will appear here.' }}
             </p>
-            <a href="{{ route('shop.products') }}" style="background: #06b6d4; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.875rem; display: inline-block;">
+            <a href="{{ route('shop.products') }}" style="background: #2563eb; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.875rem; display: inline-block;">
                 {{ app()->getLocale() === 'sw' ? 'Anza Manunuzi Sasa' : 'Start Shopping' }}
             </a>
         </div>

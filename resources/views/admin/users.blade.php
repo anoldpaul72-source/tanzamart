@@ -33,7 +33,7 @@
         gap: 6px;
     }
     .filter-tab:hover { background: #e2e8f0; color: #1e293b; }
-    .filter-tab.active { background: #06b6d4; color: white; }
+    .filter-tab.active { background: #2563eb; color: white; }
     .tab-badge {
         background: rgba(0,0,0,0.12);
         padding: 2px 7px;
@@ -52,7 +52,7 @@
         width: 240px;
         transition: 0.2s;
     }
-    .search-input:focus { border-color: #06b6d4; box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15); }
+    .search-input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
     .btn-search {
         background: #0f172a;
         color: white;
@@ -196,7 +196,7 @@
         transition: 0.2s;
         box-sizing: border-box;
     }
-    .form-control:focus { border-color: #06b6d4; box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15); }
+    .form-control:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
     .modal-footer {
         padding: 14px 22px;
         background: #f8fafc;

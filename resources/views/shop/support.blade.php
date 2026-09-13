@@ -22,8 +22,8 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
     .chat-header {
-        background: #00bcd4;
-        background: linear-gradient(135deg, #0891b2 0%, #00bcd4 100%);
+        background: #2563eb;
+        background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
         color: #ffffff !important;
         padding: 18px 24px;
         display: flex;
@@ -70,11 +70,11 @@
     }
     .msg-user {
         align-self: flex-end;
-        background: #00bcd4;
+        background: #2563eb;
         color: #ffffff;
         border-bottom-right-radius: 4px;
         font-weight: 500;
-        box-shadow: 0 2px 6px rgba(0, 188, 212, 0.25);
+        box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
     }
     .msg-bot {
         align-self: flex-start;
@@ -103,10 +103,10 @@
         transition: border-color 0.2s ease;
     }
     .chat-input:focus {
-        border-color: #00bcd4;
+        border-color: #2563eb;
     }
     .btn-send {
-        background: #00bcd4;
+        background: #2563eb;
         color: #ffffff;
         border: none;
         padding: 12px 24px;
@@ -120,7 +120,7 @@
         gap: 6px;
     }
     .btn-send:hover {
-        background: #0891b2;
+        background: #1d4ed8;
     }
     .contact-card {
         background: #ffffff;
@@ -147,8 +147,8 @@
     }
     .contact-phone-btn:hover {
         background: #f0fdfa;
-        border-color: #00bcd4;
-        color: #0891b2;
+        border-color: #2563eb;
+        color: #1d4ed8;
     }
     .whatsapp-btn {
         display: flex;
@@ -232,7 +232,7 @@
 
                 <!-- Namba za Simu za Moja kwa Moja zilizoombwa na Mtumiaji -->
                 <div style="margin-bottom: 20px;">
-                    <div style="font-size: 0.8rem; text-transform: uppercase; font-weight: 800; color: #00bcd4; margin-bottom: 8px; letter-spacing: 0.5px;">
+                    <div style="font-size: 0.8rem; text-transform: uppercase; font-weight: 800; color: #2563eb; margin-bottom: 8px; letter-spacing: 0.5px;">
                         SIMU YA MOJA KWA MOJA
                     </div>
                     
@@ -253,7 +253,7 @@
 
                 <!-- Vitufe vya WhatsApp kwa namba zote mbili -->
                 <div style="margin-bottom: 20px;">
-                    <div style="font-size: 0.8rem; text-transform: uppercase; font-weight: 800; color: #00bcd4; margin-bottom: 8px; letter-spacing: 0.5px;">
+                    <div style="font-size: 0.8rem; text-transform: uppercase; font-weight: 800; color: #2563eb; margin-bottom: 8px; letter-spacing: 0.5px;">
                         WHATSAPP SUPPORT
                     </div>
                     
@@ -269,7 +269,7 @@
                 </div>
 
                 <div>
-                    <div style="font-size: 0.8rem; text-transform: uppercase; font-weight: 800; color: #00bcd4; margin-bottom: 6px; letter-spacing: 0.5px;">
+                    <div style="font-size: 0.8rem; text-transform: uppercase; font-weight: 800; color: #2563eb; margin-bottom: 6px; letter-spacing: 0.5px;">
                         BARUA PEPE
                     </div>
                     <a href="mailto:support@tanzamart.co.tz" style="font-weight: 700; font-size: 0.95rem; color: #0f172a; text-decoration: none;">

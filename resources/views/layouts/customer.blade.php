@@ -7,11 +7,11 @@
     <title>@yield('title', __('messages.sidebar_customer_title')) - TanzaMart</title>
     <style>
         :root {
-            --primary: #00bcd4;
-            --primary-dark: #0097a7;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
             --sidebar-bg: #0f172a;
             --sidebar-hover: #1e293b;
-            --sidebar-active: #00bcd4;
+            --sidebar-active: #2563eb;
             --sidebar-text: #94a3b8;
             --sidebar-text-active: #ffffff;
             --body-bg: #f8fafc;
@@ -68,7 +68,7 @@
         .sidebar-brand .logo-icon {
             width: 38px;
             height: 38px;
-            background: linear-gradient(135deg, #00bcd4, #0097a7);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -86,7 +86,7 @@
         }
 
         .sidebar-brand .brand-badge {
-            background: #00bcd4;
+            background: #2563eb;
             color: #000;
             font-size: 10px;
             font-weight: 800;
@@ -167,10 +167,10 @@
         }
 
         .menu-link.active {
-            background: linear-gradient(135deg, #00bcd4, #0097a7);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: #ffffff;
             font-weight: 700;
-            box-shadow: 0 4px 12px rgba(0, 188, 212, 0.35);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
         }
 
         .sidebar-footer {
@@ -212,7 +212,7 @@
         }
 
         .btn-lang.active {
-            background: #00bcd4;
+            background: #2563eb;
             color: #ffffff;
         }
 
@@ -313,7 +313,7 @@
             width: 34px;
             height: 34px;
             border-radius: 50%;
-            background: #00bcd4;
+            background: #2563eb;
             color: white;
             display: flex;
             align-items: center;
@@ -481,7 +481,7 @@
                     </button>
                 </form>
             @else
-                <a href="{{ route('login') }}" class="btn-logout" style="background:#00bcd4; text-decoration:none;">
+                <a href="{{ route('login') }}" class="btn-logout" style="background:#2563eb; text-decoration:none;">
                     <span>🔑</span> {{ __('messages.nav_login') }}
                 </a>
             @endif
@@ -498,7 +498,7 @@
             </div>
 
             <div class="topbar-right">
-                <button type="button" onclick="openChangePasswordModal()" class="topbar-btn" style="background: rgba(0, 188, 212, 0.1); color: #0891b2; border: 1px solid rgba(0, 188, 212, 0.35); font-weight: 700; cursor: pointer;" title="Badili Nenosiri">
+                <button type="button" onclick="openChangePasswordModal()" class="topbar-btn" style="background: rgba(37, 99, 235, 0.1); color: #1d4ed8; border: 1px solid rgba(37, 99, 235, 0.35); font-weight: 700; cursor: pointer;" title="Badili Nenosiri">
                     <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
                 </button>
 

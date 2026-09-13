@@ -8,9 +8,9 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: #f5f5f5; padding: 40px 20px; color: #333; }
         .cart-container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .back-link { text-decoration: none; color: #00bcd4; font-size: 14px; font-weight: bold; }
+        .back-link { text-decoration: none; color: #2563eb; font-size: 14px; font-weight: bold; }
         h2 { text-align: center; margin-bottom: 30px; color: #222; font-size: 28px; }
-        h2::after { content: ''; display: block; width: 50px; height: 3px; background: #00bcd4; margin: 8px auto 0; border-radius: 2px; }
+        h2::after { content: ''; display: block; width: 50px; height: 3px; background: #2563eb; margin: 8px auto 0; border-radius: 2px; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
         th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
         .cart-thumb { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; margin-right: 15px; border: 1px solid #ddd; }
@@ -18,10 +18,10 @@
         .price { font-weight: bold; color: #444; }
         .btn-remove { color: #e53935; text-decoration: none; font-size: 14px; }
         .cart-summary { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 2px solid #eee; }
-        .total-price { font-size: 22px; font-weight: bold; color: #00bcd4; }
+        .total-price { font-size: 22px; font-weight: bold; color: #2563eb; }
         .cart-actions { display: flex; justify-content: space-between; margin-top: 30px; gap: 10px; flex-wrap: wrap; }
         .btn-continue { color: #555; text-decoration: none; padding: 12px 20px; border: 1px solid #ddd; border-radius: 6px; }
-        .btn-checkout { background: #00bcd4; color: white; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-weight: bold; }
+        .btn-checkout { background: #2563eb; color: white; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -37,7 +37,7 @@
         <div class="empty-cart" style="text-align: center; padding: 40px 0;">
             <p>{{ __('messages.cart_is_empty') }}</p>
             <br>
-            <a href="{{ route('shop.products') }}" style="color: #00bcd4; text-decoration: none; font-weight: bold;">{{ __('messages.cart_go_shop') }}</a>
+            <a href="{{ route('shop.products') }}" style="color: #2563eb; text-decoration: none; font-weight: bold;">{{ __('messages.cart_go_shop') }}</a>
         </div>
     @else
         <table>

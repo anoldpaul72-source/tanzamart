@@ -8,17 +8,17 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: #f4f7f6; padding: 40px 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
         .container { background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); width: 100%; max-width: 700px; text-align: center; }
-        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #00bcd4; font-size: 14px; font-weight: bold; float: left; }
-        .back-link:hover { color: #0097a7; }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #2563eb; font-size: 14px; font-weight: bold; float: left; }
+        .back-link:hover { color: #1d4ed8; }
         h2 { color: #333; margin-bottom: 10px; clear: both; font-size: 22px; font-weight: bold; }
         p.subtitle { color: #777; font-size: 14px; margin-bottom: 30px; }
         .plans-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
         .plan-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 25px 20px; flex: 1; min-width: 190px; text-align: center; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between; }
-        .plan-card:hover { border-color: #00bcd4; box-shadow: 0 5px 15px rgba(0,188,212,0.15); transform: translateY(-3px); }
+        .plan-card:hover { border-color: #2563eb; box-shadow: 0 5px 15px rgba(37, 99, 235,0.15); transform: translateY(-3px); }
         .plan-card h3 { color: #444; margin-bottom: 15px; font-size: 16px; font-weight: bold; }
-        .plan-card p { font-size: 17px; font-weight: bold; color: #00bcd4; margin-bottom: 20px; }
-        .btn-choose { background: #00bcd4; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; text-decoration: none; display: block; width: 100%; font-size: 14px; transition: background 0.3s; }
-        .btn-choose:hover { background: #0097a7; }
+        .plan-card p { font-size: 17px; font-weight: bold; color: #2563eb; margin-bottom: 20px; }
+        .btn-choose { background: #2563eb; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; text-decoration: none; display: block; width: 100%; font-size: 14px; transition: background 0.3s; }
+        .btn-choose:hover { background: #1d4ed8; }
     </style>
 </head>
 <body>

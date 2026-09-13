@@ -6,19 +6,19 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'TanzaMart - ' . __('messages.tagline'))</title>
 
-    <meta name="theme-color" content="#00bcd4">
+    <meta name="theme-color" content="#2563eb">
 
     <style>
         :root {
-            --primary: #00bcd4;
-            --primary-dark: #0097a7;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
             --sidebar-width: 280px;
             --sidebar-bg: #0b1329;
             --sidebar-header: #070d1d;
             --sidebar-card: rgba(255, 255, 255, 0.04);
             --sidebar-card-border: rgba(255, 255, 255, 0.08);
             --sidebar-text: #94a3b8;
-            --sidebar-hover: rgba(0, 188, 212, 0.12);
+            --sidebar-hover: rgba(37, 99, 235, 0.12);
             --text-main: #1e293b;
             --bg-main: #f8fafc;
             --header-bg: #111827;
@@ -170,14 +170,14 @@
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), #00e5ff);
+            background: linear-gradient(135deg, var(--primary), #60a5fa);
             color: #0b1329;
             font-weight: 800;
             font-size: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
             flex-shrink: 0;
         }
 
@@ -219,9 +219,9 @@
         }
 
         .role-pill.customer {
-            background: rgba(0, 188, 212, 0.18);
+            background: rgba(37, 99, 235, 0.18);
             color: #38bdf8;
-            border: 1px solid rgba(0, 188, 212, 0.3);
+            border: 1px solid rgba(37, 99, 235, 0.3);
         }
 
         .guest-actions {
@@ -311,7 +311,7 @@
         }
 
         .sidebar-nav-link.active {
-            background: rgba(0, 188, 212, 0.2);
+            background: rgba(37, 99, 235, 0.2);
             color: var(--primary);
             border-left: 3px solid var(--primary);
         }
@@ -353,14 +353,14 @@
         }
 
         .sidebar-category-toggle:hover {
-            background: rgba(0, 188, 212, 0.12);
-            border-color: rgba(0, 188, 212, 0.35);
-            color: #00bcd4;
+            background: rgba(37, 99, 235, 0.12);
+            border-color: rgba(37, 99, 235, 0.35);
+            color: #2563eb;
         }
 
         .sidebar-category-toggle.open {
-            background: rgba(0, 188, 212, 0.15);
-            border-color: rgba(0, 188, 212, 0.4);
+            background: rgba(37, 99, 235, 0.15);
+            border-color: rgba(37, 99, 235, 0.4);
             color: #ffffff;
         }
 
@@ -379,7 +379,7 @@
 
         .sidebar-category-toggle.open .category-chevron {
             transform: rotate(180deg);
-            color: #00bcd4;
+            color: #2563eb;
         }
 
         .sidebar-category-dropdown {
@@ -404,7 +404,7 @@
             width: 100%;
             padding: 9px 32px 9px 12px;
             background: #0f172a;
-            border: 1.5px solid rgba(0, 188, 212, 0.35);
+            border: 1.5px solid rgba(37, 99, 235, 0.35);
             border-radius: 8px;
             color: #38bdf8;
             font-size: 12.5px;
@@ -414,16 +414,16 @@
             transition: all 0.2s;
             appearance: none;
             -webkit-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300bcd4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232563eb'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 10px center;
             background-size: 14px;
         }
 
         .sidebar-category-select:hover, .sidebar-category-select:focus {
-            border-color: #00bcd4;
+            border-color: #2563eb;
             background-color: #1e293b;
-            box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
         }
 
         .sidebar-category-select option {
@@ -434,8 +434,8 @@
 
         /* Quick Support Banner in Sidebar */
         .sidebar-support-card {
-            background: linear-gradient(135deg, rgba(0, 188, 212, 0.12), rgba(15, 23, 42, 0.4));
-            border: 1px solid rgba(0, 188, 212, 0.3);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(15, 23, 42, 0.4));
+            border: 1px solid rgba(37, 99, 235, 0.3);
             border-radius: 10px;
             padding: 12px;
             margin-top: 15px;
@@ -464,7 +464,7 @@
             color: var(--primary);
             font-weight: bold;
             padding: 4px 10px;
-            background: rgba(0, 188, 212, 0.15);
+            background: rgba(37, 99, 235, 0.15);
             border-radius: 6px;
             transition: var(--transition);
         }
@@ -507,7 +507,7 @@
         .lang-pill-btn.active, .lang-pill-btn:hover {
             border-color: var(--primary);
             color: #ffffff;
-            background: rgba(0, 188, 212, 0.15);
+            background: rgba(37, 99, 235, 0.15);
         }
 
         .sidebar-logout-btn {
@@ -620,9 +620,9 @@
         }
 
         .header-cart-btn {
-            background: rgba(0, 188, 212, 0.15);
+            background: rgba(37, 99, 235, 0.15);
             color: var(--primary) !important;
-            border: 1px solid rgba(0, 188, 212, 0.3);
+            border: 1px solid rgba(37, 99, 235, 0.3);
             display: flex;
             align-items: center;
             gap: 6px;
@@ -638,7 +638,7 @@
             padding: 6px 10px;
             background: #1e293b;
             color: var(--primary);
-            border: 1px solid rgba(0, 188, 212, 0.4);
+            border: 1px solid rgba(37, 99, 235, 0.4);
             border-radius: 6px;
             font-size: 13px;
             font-weight: bold;
@@ -798,7 +798,7 @@
                                 @else
                                     <span class="role-pill customer">🛍️ Customer</span>
                                 @endif
-                                <button type="button" onclick="openChangePasswordModal()" style="background: none; border: none; color: #00bcd4; font-size: 11px; font-weight: 700; cursor: pointer; padding: 2px 4px; display: inline-flex; align-items: center; gap: 3px;" title="Badili Nenosiri">
+                                <button type="button" onclick="openChangePasswordModal()" style="background: none; border: none; color: #2563eb; font-size: 11px; font-weight: 700; cursor: pointer; padding: 2px 4px; display: inline-flex; align-items: center; gap: 3px;" title="Badili Nenosiri">
                                     <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
                                 </button>
                             </div>
@@ -980,7 +980,7 @@
             </div>
 
             @auth
-                <button type="button" onclick="openChangePasswordModal()" class="sidebar-logout-btn" style="background: rgba(0, 188, 212, 0.12); border: 1px solid rgba(0, 188, 212, 0.3); color: #00bcd4; margin-bottom: 6px;" title="Badili Nenosiri la akaunti">
+                <button type="button" onclick="openChangePasswordModal()" class="sidebar-logout-btn" style="background: rgba(37, 99, 235, 0.12); border: 1px solid rgba(37, 99, 235, 0.3); color: #2563eb; margin-bottom: 6px;" title="Badili Nenosiri la akaunti">
                     <span>🔑</span> {{ app()->getLocale() == 'sw' ? 'Badili Nenosiri' : 'Change Password' }}
                 </button>
                 <form action="{{ route('logout') }}" method="POST">
@@ -1009,7 +1009,7 @@
                 <a href="{{ route('cart.index') }}" class="header-cart-btn" title="{{ __('messages.nav_cart') }}">
                     <span>🛒</span>
                     @if($cartCount > 0)
-                        <span style="background: #0b1329; color: #00bcd4; padding: 1px 6px; border-radius: 10px; font-size: 11px; font-weight: bold;">{{ $cartCount }}</span>
+                        <span style="background: #0b1329; color: #2563eb; padding: 1px 6px; border-radius: 10px; font-size: 11px; font-weight: bold;">{{ $cartCount }}</span>
                     @endif
                 </a>
 
@@ -1055,9 +1055,9 @@
             <p>© 2026 TanzaMart. {{ __('messages.footer_rights') }}</p>
             <div class="footer-links">
                 <a href="{{ route('home') }}">{{ __('messages.nav_home') }}</a> | 
-                <a href="{{ route('about') }}" style="color: #00bcd4; font-weight: 700;">ℹ️ {{ app()->getLocale() == 'sw' ? 'Kuhusu Sisi' : 'About Us' }}</a> | 
+                <a href="{{ route('about') }}" style="color: #2563eb; font-weight: 700;">ℹ️ {{ app()->getLocale() == 'sw' ? 'Kuhusu Sisi' : 'About Us' }}</a> | 
                 <a href="{{ route('shop.products') }}">{{ __('messages.nav_products') }}</a> | 
-                <a href="{{ route('order.track') }}" style="color: #00bcd4; font-weight: bold;">{{ __('messages.nav_track') }} 📦</a> | 
+                <a href="{{ route('order.track') }}" style="color: #2563eb; font-weight: bold;">{{ __('messages.nav_track') }} 📦</a> | 
                 @auth
                     <a href="{{ route('order.my_orders') }}">{{ __('messages.nav_my_orders') }}</a> | 
                 @endauth

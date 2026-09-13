@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ __('messages.products_header_title') }} - TanzaMart</title>
-    <meta name="theme-color" content="#00bcd4">
+    <meta name="theme-color" content="#2563eb">
 
     <style>
         * {
@@ -32,18 +32,18 @@
 
         .home-btn {
             text-decoration: none;
-            color: #00bcd4;
+            color: #2563eb;
             font-weight: bold;
             font-size: 16px;
             padding: 8px 15px;
-            border: 2px solid #00bcd4;
+            border: 2px solid #2563eb;
             border-radius: 4px;
             transition: 0.3s;
             background: white;
         }
 
         .home-btn:hover {
-            background: #00bcd4;
+            background: #2563eb;
             color: white;
         }
 
@@ -71,12 +71,12 @@
         }
 
         input.search-input:focus {
-            border-color: #00bcd4;
+            border-color: #2563eb;
         }
 
         button.search-btn {
             padding: 10px 18px;
-            background: #00bcd4;
+            background: #2563eb;
             color: white;
             border: none;
             cursor: pointer;
@@ -87,7 +87,7 @@
         }
 
         button.search-btn:hover {
-            background: #0097a7;
+            background: #1d4ed8;
         }
 
         .category-filter {
@@ -112,9 +112,9 @@
         }
 
         .category-btn:hover, .category-btn.active {
-            background: #00bcd4;
+            background: #2563eb;
             color: white;
-            border-color: #00bcd4;
+            border-color: #2563eb;
         }
 
         .products {
@@ -155,7 +155,7 @@
             position: absolute;
             top: 22px;
             left: 22px;
-            background: #00bcd4;
+            background: #2563eb;
             color: white;
             font-size: 11px;
             font-weight: bold;
@@ -177,11 +177,11 @@
         }
 
         .product h3 a:hover {
-            color: #00bcd4;
+            color: #2563eb;
         }
 
         .price-tag {
-            color: #00bcd4;
+            color: #2563eb;
             font-weight: bold;
             font-size: 18px;
             margin: 5px 0 10px;
@@ -207,7 +207,7 @@
         }
 
         .cart-btn:hover {
-            background: #00bcd4;
+            background: #2563eb;
         }
 
         .pagination-container {
@@ -237,9 +237,9 @@
         }
 
         .pagination-container .pagination li.active span {
-            background: #00bcd4;
+            background: #2563eb;
             color: white;
-            border-color: #00bcd4;
+            border-color: #2563eb;
         }
 
         @media(max-width: 768px) {
