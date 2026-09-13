@@ -1,0 +1,10 @@
+.git
+.github
+node_modules
+vendor
+scratch
+.env
+.env.backup
+.phpunit.cache
+*.log
+docker-compose*.yml
