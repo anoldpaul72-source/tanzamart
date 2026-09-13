@@ -10,11 +10,23 @@ class ShopController extends Controller
 {
     public function products(Request $request)
     {
-        $categories = Category::all();
+        $categories = Category::withCount('products')->get();
         $query = Product::with('category', 'vendor')->where('status', 'active');
+        $activeCategory = null;
 
         if ($request->filled('category')) {
-            $query->where('category_id', $request->category);
+            $catParam = $request->category;
+            if (is_numeric($catParam)) {
+                $activeCategory = Category::find($catParam);
+                if ($activeCategory) {
+                    $query->where('category_id', $activeCategory->id);
+                }
+            } else {
+                $activeCategory = Category::where('slug', $catParam)->first();
+                if ($activeCategory) {
+                    $query->where('category_id', $activeCategory->id);
+                }
+            }
         }
 
         if ($request->filled('search')) {
@@ -29,13 +41,15 @@ class ShopController extends Controller
             $query->orderBy('price', 'asc');
         } elseif ($request->get('sort') === 'price_desc') {
             $query->orderBy('price', 'desc');
+        } elseif ($request->get('sort') === 'popular') {
+            $query->orderBy('views', 'desc');
         } else {
             $query->latest();
         }
 
         $products = $query->paginate(12)->withQueryString();
 
-        return view('shop.products', compact('products', 'categories'));
+        return view('shop.products', compact('products', 'categories', 'activeCategory'));
     }
 
     public function show(Request $request, $id)
