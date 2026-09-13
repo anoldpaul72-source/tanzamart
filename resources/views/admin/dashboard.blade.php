@@ -180,7 +180,10 @@
             <h1>⚡ {{ __('messages.sidebar_welcome') }} {{ Auth::user()->name ?? 'Admin' }}</h1>
             <p>{{ __('messages.sidebar_role_admin') }} - TanzaMart E-Commerce Administration & Escrow System</p>
         </div>
-        <div>
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <a href="{{ route('admin.backup.export') }}" class="dash-badge" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.5); color: #34d399; text-decoration: none;" title="Download full JSON data backup">
+                <span>💾</span> Pakua Backup ya Mfumo
+            </a>
             <span class="dash-badge">
                 <span>🛡️</span> {{ __('messages.sidebar_role_admin') }}
             </span>
@@ -287,6 +290,10 @@
             <a href="{{ route('admin.reports') }}" class="action-tile">
                 <span class="tile-icon">📈</span>
                 <span>{{ __('messages.sidebar_reports') }}</span>
+            </a>
+            <a href="{{ route('admin.backup.export') }}" class="action-tile" style="border-color: rgba(16, 185, 129, 0.45); background: rgba(16, 185, 129, 0.05);">
+                <span class="tile-icon">💾</span>
+                <span style="color: #10b981; font-weight: 700;">Export Backup Data</span>
             </a>
         </div>
     </div>

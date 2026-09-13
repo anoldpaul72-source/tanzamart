@@ -99,6 +99,7 @@ Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
     Route::delete('/users/{id}', [AdminDashboardController::class, 'deleteUser'])->name('admin.users.destroy');
     Route::get('/reports', [AdminDashboardController::class, 'reports'])->name('admin.reports');
     Route::get('/reports.php', [AdminDashboardController::class, 'reports']);
+    Route::get('/backup/export', [AdminDashboardController::class, 'exportBackup'])->name('admin.backup.export');
 });
 
 Route::get('/admin/reports.php', [AdminDashboardController::class, 'reports']);

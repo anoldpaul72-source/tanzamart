@@ -549,4 +549,62 @@ class AdminDashboardController extends Controller
             'report_data'
         ));
     }
+
+    public function exportBackup(Request $request)
+    {
+        $type = $request->query('type', 'json');
+
+        if ($type === 'sqlite') {
+            $sqlitePath = database_path('database.sqlite');
+            if (file_exists($sqlitePath)) {
+                $filename = 'tanzamart_database_' . date('Y-m-d_His') . '.sqlite';
+                return response()->download($sqlitePath, $filename, [
+                    'Content-Type' => 'application/x-sqlite3'
+                ]);
+            }
+        }
+
+        // Comprehensive JSON System Backup
+        $backup = [
+            'metadata' => [
+                'system' => 'TanzaMart E-Commerce Platform',
+                'version' => '2.0-Laravel11',
+                'exported_at' => now()->toIso8601String(),
+                'exported_by' => [
+                    'id' => auth()->id(),
+                    'name' => auth()->user()->name,
+                    'email' => auth()->user()->email,
+                ],
+                'counts' => [
+                    'users' => User::count(),
+                    'categories' => \App\Models\Category::count(),
+                    'products' => Product::count(),
+                    'orders' => Order::count(),
+                    'order_items' => \App\Models\OrderItem::count(),
+                    'disputes' => Dispute::count(),
+                    'withdrawals' => Withdrawal::count(),
+                    'support_messages' => \App\Models\SupportMessage::count(),
+                ]
+            ],
+            'users' => User::all()->makeHidden(['remember_token']),
+            'categories' => \App\Models\Category::all(),
+            'products' => Product::with(['category', 'vendor'])->get(),
+            'orders' => Order::with(['user', 'items'])->get(),
+            'order_items' => \App\Models\OrderItem::all(),
+            'disputes' => Dispute::with(['order', 'user'])->get(),
+            'withdrawals' => Withdrawal::with(['user'])->get(),
+            'support_messages' => \App\Models\SupportMessage::all(),
+        ];
+
+        $jsonContent = json_encode($backup, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        $filename = 'tanzamart_backup_' . date('Y-m-d_His') . '.json';
+
+        return response($jsonContent, 200, [
+            'Content-Type' => 'application/json; charset=utf-8',
+            'Content-Disposition' => 'attachment; filename="' . $filename . '"',
+            'Cache-Control' => 'no-cache, no-store, must-revalidate',
+            'Pragma' => 'no-cache',
+            'Expires' => '0',
+        ]);
+    }
 }

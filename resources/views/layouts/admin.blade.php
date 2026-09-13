@@ -450,6 +450,13 @@
                     <span>{{ __('messages.sidebar_reports') }}</span>
                 </a>
             </li>
+
+            <li class="menu-item">
+                <a href="{{ route('admin.backup.export') }}" class="menu-link" style="color: #34d399; font-weight: 700;">
+                    <span class="icon">💾</span>
+                    <span>Export Backup Data</span>
+                </a>
+            </li>
         </ul>
 
         <div class="sidebar-footer">
@@ -480,6 +487,10 @@
             </div>
 
             <div class="topbar-right">
+                <a href="{{ route('admin.backup.export') }}" class="topbar-link" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); font-weight: 700;" title="Download full system data backup">
+                    <span>💾</span> Export Backup
+                </a>
+
                 <a href="{{ route('home') }}" target="_blank" class="topbar-link">
                     <span>🛍️</span> {{ __('messages.sidebar_cust_shop') }}
                 </a>
