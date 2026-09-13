@@ -222,7 +222,10 @@
         <div class="hero-content">
             <h1>{{ __('messages.hero_title') }}</h1>
             <p>{{ __('messages.hero_subtitle') }}</p>
-            <a href="{{ route('shop.products') }}" class="btn">{{ __('messages.hero_btn') }}</a>
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                <a href="{{ route('shop.products') }}" class="btn">{{ __('messages.hero_btn') }}</a>
+                <a href="{{ route('about') }}" class="btn" style="background: rgba(255, 255, 255, 0.18); border: 1px solid rgba(255, 255, 255, 0.4); backdrop-filter: blur(4px);">ℹ️ {{ app()->getLocale() == 'sw' ? 'Kuhusu TanzaMart' : 'About TanzaMart' }}</a>
+            </div>
         </div>
     </section>
 

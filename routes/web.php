@@ -17,6 +17,7 @@ Route::get('/lang/{lang}', [HomeController::class, 'switchLang'])->name('lang.sw
 
 // Kurasa za Umma na Duka (Public & Customer)
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/products', [ShopController::class, 'products'])->name('shop.products');
 Route::get('/products/{id}', [ShopController::class, 'show'])->name('shop.product.details');
 

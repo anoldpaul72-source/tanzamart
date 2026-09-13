@@ -795,6 +795,11 @@
                         <span class="sidebar-nav-link-left"><span class="nav-icon">💬</span> {{ __('messages.nav_support') }}</span>
                     </a>
                 </li>
+                <li class="sidebar-nav-item">
+                    <a href="{{ route('about') }}" class="sidebar-nav-link {{ request()->routeIs('about') ? 'active' : '' }}">
+                        <span class="sidebar-nav-link-left"><span class="nav-icon">ℹ️</span> {{ app()->getLocale() == 'sw' ? 'Kuhusu Sisi' : 'About Us' }}</span>
+                    </a>
+                </li>
             </ul>
 
             <!-- Product Categories Section -->
@@ -857,6 +862,7 @@
 
             <nav>
                 <a href="{{ route('home') }}" class="nav-link-optional">{{ __('messages.nav_home') }}</a>
+                <a href="{{ route('about') }}" class="nav-link-optional" style="color: #38bdf8; font-weight: 700;">ℹ️ {{ app()->getLocale() == 'sw' ? 'Kuhusu Sisi' : 'About Us' }}</a>
                 <a href="{{ route('shop.products') }}" class="nav-link-optional">{{ __('messages.nav_products') }}</a>
                 <a href="{{ route('order.track') }}" class="nav-link-optional">{{ __('messages.nav_track') }}</a>
                 
@@ -926,6 +932,7 @@
             <p>© 2026 TanzaMart. {{ __('messages.footer_rights') }}</p>
             <div class="footer-links">
                 <a href="{{ route('home') }}">{{ __('messages.nav_home') }}</a> | 
+                <a href="{{ route('about') }}" style="color: #00bcd4; font-weight: 700;">ℹ️ {{ app()->getLocale() == 'sw' ? 'Kuhusu Sisi' : 'About Us' }}</a> | 
                 <a href="{{ route('shop.products') }}">{{ __('messages.nav_products') }}</a> | 
                 <a href="{{ route('order.track') }}" style="color: #00bcd4; font-weight: bold;">{{ __('messages.nav_track') }} 📦</a> | 
                 @auth

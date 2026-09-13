@@ -21,6 +21,13 @@ class HomeController extends Controller
         return view('home', compact('categories', 'featuredProducts'));
     }
 
+    public function about()
+    {
+        $categoriesCount = Category::count();
+        $productsCount = Product::where('status', 'active')->count();
+        return view('about', compact('categoriesCount', 'productsCount'));
+    }
+
     public function switchLang($lang)
     {
         if (in_array($lang, ['sw', 'en'])) {
